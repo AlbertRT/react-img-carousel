@@ -1,0 +1,70 @@
+.img-carousel {
+    overflow: hidden;
+    position: relative;
+
+    .preview-container {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            .handle {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .handle {
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        height: 40px;
+        background: rgba( 114, 114, 114, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 250ms;
+    }
+
+    .img-preview {
+        width: inherit;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+    .img-previews {
+        display: flex;
+        margin-top: 1rem;
+        gap: 1rem;
+        width: 90%;
+        margin: 1rem;
+        transition: all 250ms;
+
+        img {
+            aspect-ratio: 16 / 9;
+            border-radius: 5px;
+            filter: opacity(.5);
+            transition: all 250ms;
+            cursor: pointer;
+
+            &:hover {
+                filter: opacity(.8);
+            }
+
+            &.active {
+                border: 1px solid #000;
+                filter: opacity(1);
+            }
+        }
+    }
+}
+
