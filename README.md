@@ -1,5 +1,5 @@
 # react-img-carousel
-
+this project is insiprated by Netflix Video Carousel and Web Dev Simplified
 
 ## Installation
 
